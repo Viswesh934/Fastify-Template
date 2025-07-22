@@ -4,7 +4,6 @@ import { env, Logger } from "@api/utils";
 import fastify from "fastify";
 import { middleware } from "./modules/middleware";
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
 const API_VERSION = "v1";
 
 export const main = async () => {
