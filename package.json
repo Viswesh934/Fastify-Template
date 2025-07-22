@@ -1,0 +1,47 @@
+{
+  "name": "fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "",
+  "author": "Viswesh",
+  "license": "none",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "format": "prettier --write .",
+    "generate:migrations": "drizzle-kit generate:pg",
+    "migrate": "drizzle-kit push:pg",
+    "type-check": "tsc --noEmit",
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "watch:build": "nodemon --watch src --exec \"tsc && tsc-alias\"",
+    "prestart": "npm run build",
+    "start": "node --enable-source-maps dist/index.js",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@types/cli-color": "^2.0.6",
+    "@types/node": "^20.10.4",
+    "@types/pg": "^8.10.9",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "cli-color": "^2.0.3",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9.31.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.1.1",
+    "tsc-alias": "^1.8.8",
+    "tsx": "^4.20.3",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.4.2",
+    "drizzle-orm": "^0.29.1",
+    "fastify": "^4.25.0",
+    "fastify-plugin": "^4.5.1",
+    "pg": "^8.11.3",
+    "zod": "^3.22.4"
+  }
+}
