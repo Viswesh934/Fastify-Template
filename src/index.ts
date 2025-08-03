@@ -1,11 +1,10 @@
-import 'dotenv/config'; 
+import "dotenv/config";
 import { initDb } from "@api/db";
 import { testRoutes } from "@api/routes";
-import { addUserRoute, loginRoute   } from "@api/routes";
+import { addUserRoute, loginRoute } from "@api/routes";
 import { Logger } from "@api/utils";
 import fastify from "fastify";
-import { middleware} from "./plugins/middleware";
-
+import { middleware } from "./plugins/middleware";
 
 const API_VERSION = "v1";
 
@@ -26,10 +25,10 @@ export const main = async () => {
 
   // Routes
   server.register(testRoutes, {
-    prefix: `/${API_VERSION}/test`
+    prefix: `/${API_VERSION}/test`,
   });
   server.register(addUserRoute, {
-    prefix: `/${API_VERSION}`
+    prefix: `/${API_VERSION}`,
   });
   server.register(loginRoute, {
     prefix: `/${API_VERSION}`,

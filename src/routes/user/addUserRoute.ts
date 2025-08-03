@@ -5,7 +5,6 @@ import { usermasterInPplFirst } from "../../database/tables";
 import { hash } from "bcrypt";
 import { requireAuth } from "@api/utils";
 
-
 // Input validation schema
 const addUserSchema = z.object({
   login: z.string().email("Invalid email format"),
@@ -15,7 +14,6 @@ const addUserSchema = z.object({
   createduser: z.string().uuid("Invalid user ID"),
 });
 
-
 export const addUserRoute: FastifyPluginAsync = async (fastify) => {
   fastify.post(
     "/user",
@@ -23,41 +21,43 @@ export const addUserRoute: FastifyPluginAsync = async (fastify) => {
       preHandler: requireAuth,
       schema: {
         body: {
-          type: 'object',
+          type: "object",
           properties: {
-            login: { type: 'string', format: 'email' },
-            password: { type: 'string', minLength: 6 },
-            tenant: { type: 'string', format: 'uuid' },
-            companyId: { type: 'string', format: 'uuid' },
-            createduser: { type: 'string', format: 'uuid' },
+            login: { type: "string", format: "email" },
+            password: { type: "string", minLength: 6 },
+            tenant: { type: "string", format: "uuid" },
+            companyId: { type: "string", format: "uuid" },
+            createduser: { type: "string", format: "uuid" },
           },
-          required: ['login', 'password', 'tenant', 'companyId']
+          required: ["login", "password", "tenant", "companyId"],
         },
       },
     },
     async (request, reply) => {
       try {
-        const { login, password, tenant, companyId,createduser } = addUserSchema.parse(request.body);
+        const { login, password, tenant, companyId, createduser } = addUserSchema.parse(request.body);
 
         // Hash password
         const hashedPassword = await hash(password, 10);
 
         // Insert user
-        const newUser = await db.insert(usermasterInPplFirst).values({
-          login,
-          password: hashedPassword,
-          tenant,
-          companyId,
-          isactive: true,
-          createduser, 
-          createdtenant: tenant,
-        } as any).returning();
+        const newUser = await db
+          .insert(usermasterInPplFirst)
+          .values({
+            login,
+            password: hashedPassword,
+            tenant,
+            companyId,
+            isactive: true,
+            createduser,
+            createdtenant: tenant,
+          } as any)
+          .returning();
 
         return reply.status(201).send({
           success: true,
           data: newUser[0],
         });
-
       } catch (error) {
         if (error instanceof z.ZodError) {
           return reply.status(400).send({
@@ -74,6 +74,6 @@ export const addUserRoute: FastifyPluginAsync = async (fastify) => {
           message: "Internal server error",
         });
       }
-    }
+    },
   );
 };

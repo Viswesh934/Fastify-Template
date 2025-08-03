@@ -116,14 +116,8 @@
           "tableFrom": "masterdata",
           "tableTo": "datagroup",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "datagroup",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["datagroup", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -132,12 +126,8 @@
           "tableFrom": "masterdata",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -146,12 +136,8 @@
           "tableFrom": "masterdata",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -160,12 +146,8 @@
           "tableFrom": "masterdata",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -174,12 +156,8 @@
           "tableFrom": "masterdata",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -188,12 +166,8 @@
           "tableFrom": "masterdata",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -201,10 +175,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "uq_masterdata_id_tenant": {
-          "columns": [
-            "id",
-            "tenant"
-          ],
+          "columns": ["id", "tenant"],
           "nullsNotDistinct": false,
           "name": "uq_masterdata_id_tenant"
         }
@@ -301,12 +272,8 @@
           "tableFrom": "company_masterdata_map",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -315,14 +282,8 @@
           "tableFrom": "company_masterdata_map",
           "tableTo": "datagroup",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "object_type",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["object_type", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -331,14 +292,8 @@
           "tableFrom": "company_masterdata_map",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "object_value",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["object_value", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -346,12 +301,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "uq_cmd_company_object_tenant": {
-          "columns": [
-            "company_id",
-            "object_type",
-            "object_value",
-            "tenant"
-          ],
+          "columns": ["company_id", "object_type", "object_value", "tenant"],
           "nullsNotDistinct": false,
           "name": "uq_cmd_company_object_tenant"
         }
@@ -472,12 +422,8 @@
           "tableFrom": "certification_providers",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -486,12 +432,8 @@
           "tableFrom": "certification_providers",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -500,12 +442,8 @@
           "tableFrom": "certification_providers",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -514,12 +452,8 @@
           "tableFrom": "certification_providers",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -528,12 +462,8 @@
           "tableFrom": "certification_providers",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -666,12 +596,8 @@
           "tableFrom": "content",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -680,12 +606,8 @@
           "tableFrom": "content",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -694,12 +616,8 @@
           "tableFrom": "content",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -708,12 +626,8 @@
           "tableFrom": "content",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -722,12 +636,8 @@
           "tableFrom": "content",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -826,12 +736,8 @@
           "tableFrom": "company_masterdata_hierarchy",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -840,12 +746,8 @@
           "tableFrom": "company_masterdata_hierarchy",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "masterdata_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["masterdata_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -854,12 +756,8 @@
           "tableFrom": "company_masterdata_hierarchy",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "parent_masterdata_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["parent_masterdata_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -867,12 +765,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "uq_cmh_company_masterdata_tenant": {
-          "columns": [
-            "company_id",
-            "masterdata_id",
-            "parent_masterdata_id",
-            "tenant"
-          ],
+          "columns": ["company_id", "masterdata_id", "parent_masterdata_id", "tenant"],
           "nullsNotDistinct": false,
           "name": "uq_cmh_company_masterdata_tenant"
         }
@@ -994,12 +887,8 @@
           "tableFrom": "datagroup",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1008,12 +897,8 @@
           "tableFrom": "datagroup",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1022,12 +907,8 @@
           "tableFrom": "datagroup",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1036,12 +917,8 @@
           "tableFrom": "datagroup",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1050,12 +927,8 @@
           "tableFrom": "datagroup",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -1165,12 +1038,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1179,12 +1048,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1193,12 +1058,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1207,12 +1068,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1221,12 +1078,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1235,14 +1088,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "datagroup",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "code",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["code", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1251,14 +1098,8 @@
           "tableFrom": "datagrouphierarchy",
           "tableTo": "datagroup",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "parentcode",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["parentcode", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -1394,12 +1235,8 @@
           "tableFrom": "certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1408,12 +1245,8 @@
           "tableFrom": "certifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1422,12 +1255,8 @@
           "tableFrom": "certifications",
           "tableTo": "certification_providers",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "provider_id"
-          ],
-          "columnsTo": [
-            "provider_id"
-          ],
+          "columnsFrom": ["provider_id"],
+          "columnsTo": ["provider_id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -1436,12 +1265,8 @@
           "tableFrom": "certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1450,12 +1275,8 @@
           "tableFrom": "certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -1464,12 +1285,8 @@
           "tableFrom": "certifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -1568,12 +1385,8 @@
           "tableFrom": "company_agency_map",
           "tableTo": "agency_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "agency_master_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["agency_master_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1582,12 +1395,8 @@
           "tableFrom": "company_agency_map",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1596,12 +1405,8 @@
           "tableFrom": "company_agency_map",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "service_masterdata_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["service_masterdata_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -1723,12 +1528,8 @@
           "tableFrom": "modulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1737,12 +1538,8 @@
           "tableFrom": "modulemaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1751,12 +1548,8 @@
           "tableFrom": "modulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1765,12 +1558,8 @@
           "tableFrom": "modulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -1779,12 +1568,8 @@
           "tableFrom": "modulemaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -1889,12 +1674,8 @@
           "tableFrom": "notifications",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -1903,12 +1684,8 @@
           "tableFrom": "notifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "created_tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["created_tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1917,12 +1694,8 @@
           "tableFrom": "notifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "created_user"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["created_user"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1931,12 +1704,8 @@
           "tableFrom": "notifications",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "notification_type"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["notification_type"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1945,12 +1714,8 @@
           "tableFrom": "notifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -1959,12 +1724,8 @@
           "tableFrom": "notifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updated_tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updated_tenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -1973,12 +1734,8 @@
           "tableFrom": "notifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updated_user"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updated_user"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -2117,9 +1874,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "agency_master_agency_code_key": {
-          "columns": [
-            "agency_code"
-          ],
+          "columns": ["agency_code"],
           "nullsNotDistinct": false,
           "name": "agency_master_agency_code_key"
         }
@@ -2365,12 +2120,8 @@
           "tableFrom": "company_master",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2379,12 +2130,8 @@
           "tableFrom": "company_master",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2393,12 +2140,8 @@
           "tableFrom": "company_master",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "parent_company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["parent_company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -2407,12 +2150,8 @@
           "tableFrom": "company_master",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2421,12 +2160,8 @@
           "tableFrom": "company_master",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -2435,12 +2170,8 @@
           "tableFrom": "company_master",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -2550,14 +2281,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "code",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["code", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2566,14 +2291,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "parentcode",
-            "tenant"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["parentcode", "tenant"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2582,12 +2301,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2596,12 +2311,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2610,12 +2321,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2624,12 +2331,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2638,12 +2341,8 @@
           "tableFrom": "masterdatahierarchy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -2777,12 +2476,8 @@
           "tableFrom": "policy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2791,12 +2486,8 @@
           "tableFrom": "policy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2805,12 +2496,8 @@
           "tableFrom": "policy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -2819,12 +2506,8 @@
           "tableFrom": "policy",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -2833,12 +2516,8 @@
           "tableFrom": "policy",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -2948,14 +2627,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "role",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "role"
-          ],
-          "columnsTo": [
-            "tenant",
-            "code"
-          ],
+          "columnsFrom": ["tenant", "role"],
+          "columnsTo": ["tenant", "code"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -2964,12 +2637,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -2978,12 +2647,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -2992,12 +2657,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -3006,12 +2667,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -3020,12 +2677,8 @@
           "tableFrom": "rolepermission",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -3173,12 +2826,8 @@
           "tableFrom": "onboarding_references",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3187,12 +2836,8 @@
           "tableFrom": "onboarding_references",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3201,12 +2846,8 @@
           "tableFrom": "onboarding_references",
           "tableTo": "user_onboarding",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "onboarding_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["onboarding_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -3215,12 +2856,8 @@
           "tableFrom": "onboarding_references",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -3229,12 +2866,8 @@
           "tableFrom": "onboarding_references",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -3242,10 +2875,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "uq_onboard_ref": {
-          "columns": [
-            "onboarding_id",
-            "referee_email"
-          ],
+          "columns": ["onboarding_id", "referee_email"],
           "nullsNotDistinct": false,
           "name": "uq_onboard_ref"
         }
@@ -3400,12 +3030,8 @@
           "tableFrom": "permission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3414,12 +3040,8 @@
           "tableFrom": "permission",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3428,12 +3050,8 @@
           "tableFrom": "permission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3442,12 +3060,8 @@
           "tableFrom": "permission",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3456,12 +3070,8 @@
           "tableFrom": "permission",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -3583,12 +3193,8 @@
           "tableFrom": "subscriptionmaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3597,12 +3203,8 @@
           "tableFrom": "subscriptionmaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3611,12 +3213,8 @@
           "tableFrom": "subscriptionmaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3625,12 +3223,8 @@
           "tableFrom": "subscriptionmaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -3639,12 +3233,8 @@
           "tableFrom": "subscriptionmaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -3748,12 +3338,8 @@
           "tableFrom": "subscriptionpricing",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3762,12 +3348,8 @@
           "tableFrom": "subscriptionpricing",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3776,12 +3358,8 @@
           "tableFrom": "subscriptionpricing",
           "tableTo": "submodulemaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "submoduleid"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["submoduleid"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -3790,12 +3368,8 @@
           "tableFrom": "subscriptionpricing",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -3804,12 +3378,8 @@
           "tableFrom": "subscriptionpricing",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -3902,12 +3472,8 @@
           "tableFrom": "support_ticket_attachment",
           "tableTo": "support_ticket",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "support_ticket_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["support_ticket_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }
@@ -4035,12 +3601,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4049,12 +3611,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4063,12 +3621,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "modulemaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "module"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["module"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4077,12 +3631,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4091,12 +3641,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4105,12 +3651,8 @@
           "tableFrom": "submodulemaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -4238,12 +3780,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "priority"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["priority"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4252,12 +3790,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "ticket_type"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["ticket_type"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4266,12 +3800,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "assigned_user"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["assigned_user"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4280,12 +3810,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4294,12 +3820,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4308,12 +3830,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "priority"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["priority"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4322,12 +3840,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "reporter_user"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["reporter_user"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4336,12 +3850,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "status"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["status"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4350,12 +3860,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4364,12 +3870,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4378,12 +3880,8 @@
           "tableFrom": "support_ticket",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -4499,12 +3997,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4513,12 +4007,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4527,12 +4017,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "modulemaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "module"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["module"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4541,12 +4027,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "submodulemaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "submodule"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["submodule"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4555,12 +4037,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "subscriptionmaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "subscription"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["subscription"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4569,12 +4047,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4583,12 +4057,8 @@
           "tableFrom": "subscriptiondetails",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -4723,12 +4193,8 @@
           "tableFrom": "survey",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4737,12 +4203,8 @@
           "tableFrom": "survey",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4751,12 +4213,8 @@
           "tableFrom": "survey",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4765,12 +4223,8 @@
           "tableFrom": "survey",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4779,12 +4233,8 @@
           "tableFrom": "survey",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4793,12 +4243,8 @@
           "tableFrom": "survey",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -4915,12 +4361,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4929,12 +4371,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4943,12 +4381,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4957,12 +4391,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "survey_question",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "followup_question_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["followup_question_id"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -4971,12 +4401,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "survey_option",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_option_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_option_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -4985,12 +4411,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -4999,12 +4421,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -5013,12 +4431,8 @@
           "tableFrom": "survey_conditional_question",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -5153,12 +4567,8 @@
           "tableFrom": "survey_question",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5167,12 +4577,8 @@
           "tableFrom": "survey_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5181,12 +4587,8 @@
           "tableFrom": "survey_question",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5195,12 +4597,8 @@
           "tableFrom": "survey_question",
           "tableTo": "survey_section",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_section_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_section_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -5209,12 +4607,8 @@
           "tableFrom": "survey_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5223,12 +4617,8 @@
           "tableFrom": "survey_question",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -5237,12 +4627,8 @@
           "tableFrom": "survey_question",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -5353,12 +4739,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5367,12 +4749,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5381,12 +4759,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5395,12 +4769,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "survey",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -5409,12 +4779,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5423,12 +4789,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -5437,12 +4799,8 @@
           "tableFrom": "survey_linked_entity",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -5559,12 +4917,8 @@
           "tableFrom": "survey_section",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5573,12 +4927,8 @@
           "tableFrom": "survey_section",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5587,12 +4937,8 @@
           "tableFrom": "survey_section",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5601,12 +4947,8 @@
           "tableFrom": "survey_section",
           "tableTo": "survey",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -5615,12 +4957,8 @@
           "tableFrom": "survey_section",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5629,12 +4967,8 @@
           "tableFrom": "survey_section",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -5643,12 +4977,8 @@
           "tableFrom": "survey_section",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -5747,12 +5077,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5761,12 +5087,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5775,12 +5097,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5789,12 +5107,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "survey",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5803,12 +5117,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5817,12 +5127,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -5831,12 +5137,8 @@
           "tableFrom": "survey_instance",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -5947,12 +5249,8 @@
           "tableFrom": "survey_option",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5961,12 +5259,8 @@
           "tableFrom": "survey_option",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5975,12 +5269,8 @@
           "tableFrom": "survey_option",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -5989,12 +5279,8 @@
           "tableFrom": "survey_option",
           "tableTo": "survey_question",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_question_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_question_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -6003,12 +5289,8 @@
           "tableFrom": "survey_option",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6017,12 +5299,8 @@
           "tableFrom": "survey_option",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6031,12 +5309,8 @@
           "tableFrom": "survey_option",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -6147,12 +5421,8 @@
           "tableFrom": "survey_user",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6161,12 +5431,8 @@
           "tableFrom": "survey_user",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6175,12 +5441,8 @@
           "tableFrom": "survey_user",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6189,12 +5451,8 @@
           "tableFrom": "survey_user",
           "tableTo": "survey",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -6203,12 +5461,8 @@
           "tableFrom": "survey_user",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6217,12 +5471,8 @@
           "tableFrom": "survey_user",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6231,12 +5481,8 @@
           "tableFrom": "survey_user",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -6353,12 +5599,8 @@
           "tableFrom": "survey_response",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6367,12 +5609,8 @@
           "tableFrom": "survey_response",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6381,12 +5619,8 @@
           "tableFrom": "survey_response",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6395,12 +5629,8 @@
           "tableFrom": "survey_response",
           "tableTo": "survey_instance",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_instance_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_instance_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -6409,12 +5639,8 @@
           "tableFrom": "survey_response",
           "tableTo": "survey_question",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "survey_question_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["survey_question_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6423,12 +5649,8 @@
           "tableFrom": "survey_response",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6437,12 +5659,8 @@
           "tableFrom": "survey_response",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6451,12 +5669,8 @@
           "tableFrom": "survey_response",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -6548,12 +5762,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "commented_by"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["commented_by"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6562,12 +5772,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6576,12 +5782,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6590,12 +5792,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "support_ticket",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "ticket_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["ticket_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -6604,12 +5802,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6618,12 +5812,8 @@
           "tableFrom": "support_ticket_comment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -6709,12 +5899,8 @@
           "tableFrom": "support_ticket_sla",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "priority"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["priority"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6723,12 +5909,8 @@
           "tableFrom": "support_ticket_sla",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "ticket_type"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["ticket_type"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -6833,12 +6015,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "changed_by"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["changed_by"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6847,12 +6025,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6861,12 +6035,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6875,12 +6045,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "new_status"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["new_status"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -6889,12 +6055,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "previous_status"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["previous_status"],
+          "columnsTo": ["code"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6903,12 +6065,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "support_ticket",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "ticket_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["ticket_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -6917,12 +6075,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -6931,12 +6085,8 @@
           "tableFrom": "support_ticket_status_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -7076,12 +6226,8 @@
           "tableFrom": "tenantpayment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7090,12 +6236,8 @@
           "tableFrom": "tenantpayment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7104,12 +6246,8 @@
           "tableFrom": "tenantpayment",
           "tableTo": "tenantsubscription",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenantsubscription"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenantsubscription"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7118,12 +6256,8 @@
           "tableFrom": "tenantpayment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -7132,12 +6266,8 @@
           "tableFrom": "tenantpayment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -7378,12 +6508,8 @@
           "tableFrom": "tenant",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7392,12 +6518,8 @@
           "tableFrom": "tenant",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7406,12 +6528,8 @@
           "tableFrom": "tenant",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "parenttenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["parenttenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7420,12 +6538,8 @@
           "tableFrom": "tenant",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -7434,12 +6548,8 @@
           "tableFrom": "tenant",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -7648,14 +6758,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "tenantcontacttype"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "tenantcontacttype"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -7664,12 +6768,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7678,12 +6778,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7692,12 +6788,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7706,12 +6798,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -7720,12 +6808,8 @@
           "tableFrom": "tenantcontact",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -7841,12 +6925,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7855,12 +6935,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7869,12 +6945,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "submodulemaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "submoduleid"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["submoduleid"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7883,12 +6955,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7897,12 +6965,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "tenantsubscription",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenantsubid"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenantsubid"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -7911,12 +6975,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -7925,12 +6985,8 @@
           "tableFrom": "tenantsubscriptionpricing",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -8051,12 +7107,8 @@
           "tableFrom": "user",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8065,12 +7117,8 @@
           "tableFrom": "user",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8079,12 +7127,8 @@
           "tableFrom": "user",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8093,12 +7137,8 @@
           "tableFrom": "user",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8107,12 +7147,8 @@
           "tableFrom": "user",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -8247,12 +7283,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "onboarding_status"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["onboarding_status"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8261,12 +7293,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8275,12 +7303,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8289,12 +7313,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8303,12 +7323,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8317,12 +7333,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8331,12 +7343,8 @@
           "tableFrom": "user_onboarding",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }
@@ -8447,12 +7455,8 @@
           "tableFrom": "user_language",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8461,12 +7465,8 @@
           "tableFrom": "user_language",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8475,12 +7475,8 @@
           "tableFrom": "user_language",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "language_code"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["language_code"],
+          "columnsTo": ["code"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8489,12 +7485,8 @@
           "tableFrom": "user_language",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8503,12 +7495,8 @@
           "tableFrom": "user_language",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8517,12 +7505,8 @@
           "tableFrom": "user_language",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }
@@ -8530,10 +7514,7 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "uq_user_lang": {
-          "columns": [
-            "usermaster_id",
-            "language_code"
-          ],
+          "columns": ["usermaster_id", "language_code"],
           "nullsNotDistinct": false,
           "name": "uq_user_lang"
         }
@@ -8683,12 +7664,8 @@
           "tableFrom": "userbanking",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8697,12 +7674,8 @@
           "tableFrom": "userbanking",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8711,12 +7684,8 @@
           "tableFrom": "userbanking",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8725,12 +7694,8 @@
           "tableFrom": "userbanking",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8739,12 +7704,8 @@
           "tableFrom": "userbanking",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8753,12 +7714,8 @@
           "tableFrom": "userbanking",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -8874,12 +7831,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "assigned_user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["assigned_user_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8888,12 +7841,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8902,12 +7851,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8916,12 +7861,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "user_onboarding",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "onboarding_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["onboarding_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -8930,12 +7871,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -8944,12 +7881,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -8958,12 +7891,8 @@
           "tableFrom": "user_onboarding_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -9096,12 +8025,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "user_onboarding",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "onboarding_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["onboarding_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -9110,12 +8035,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9124,12 +8045,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9138,12 +8055,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9152,12 +8065,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -9166,12 +8075,8 @@
           "tableFrom": "user_onboarding_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -9290,12 +8195,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "agency_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "agency_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["agency_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9304,12 +8205,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9318,12 +8215,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9332,12 +8225,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9346,12 +8235,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9360,12 +8245,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9374,12 +8255,8 @@
           "tableFrom": "user_bgv_assignment",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -9570,14 +8447,8 @@
           "tableFrom": "usercontact",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "usercontacttype"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "usercontacttype"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9586,12 +8457,8 @@
           "tableFrom": "usercontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9600,12 +8467,8 @@
           "tableFrom": "usercontact",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9614,12 +8477,8 @@
           "tableFrom": "usercontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9628,12 +8487,8 @@
           "tableFrom": "usercontact",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9642,12 +8497,8 @@
           "tableFrom": "usercontact",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -9656,12 +8507,8 @@
           "tableFrom": "usercontact",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -9810,12 +8657,8 @@
           "tableFrom": "usercontent",
           "tableTo": "content",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "content"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["content"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9824,12 +8667,8 @@
           "tableFrom": "usercontent",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9838,12 +8677,8 @@
           "tableFrom": "usercontent",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -9852,12 +8687,8 @@
           "tableFrom": "usercontent",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -9866,12 +8697,8 @@
           "tableFrom": "usercontent",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -9880,12 +8707,8 @@
           "tableFrom": "usercontent",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -10045,12 +8868,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "certifications",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "certification_id"
-          ],
-          "columnsTo": [
-            "certification_id"
-          ],
+          "columnsFrom": ["certification_id"],
+          "columnsTo": ["certification_id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         },
@@ -10059,12 +8878,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10073,12 +8888,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10087,12 +8898,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10101,12 +8908,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10115,12 +8918,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10129,12 +8928,8 @@
           "tableFrom": "user_certifications",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }
@@ -10267,12 +9062,8 @@
           "tableFrom": "userdocument",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10281,12 +9072,8 @@
           "tableFrom": "userdocument",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10295,12 +9082,8 @@
           "tableFrom": "userdocument",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10309,12 +9092,8 @@
           "tableFrom": "userdocument",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10323,12 +9102,8 @@
           "tableFrom": "userdocument",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10337,12 +9112,8 @@
           "tableFrom": "userdocument",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -10543,12 +9314,8 @@
           "tableFrom": "usereducation",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10557,12 +9324,8 @@
           "tableFrom": "usereducation",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -10571,12 +9334,8 @@
           "tableFrom": "usereducation",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10585,12 +9344,8 @@
           "tableFrom": "usereducation",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -10599,12 +9354,8 @@
           "tableFrom": "usereducation",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -10709,12 +9460,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -10723,12 +9470,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -10737,12 +9480,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -10751,12 +9490,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -10765,12 +9500,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -10779,12 +9510,8 @@
           "tableFrom": "usereducation_document",
           "tableTo": "usereducation",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usereducation_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usereducation_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -11064,12 +9791,8 @@
           "tableFrom": "userexperience",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11078,12 +9801,8 @@
           "tableFrom": "userexperience",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11092,12 +9811,8 @@
           "tableFrom": "userexperience",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11106,12 +9821,8 @@
           "tableFrom": "userexperience",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -11120,12 +9831,8 @@
           "tableFrom": "userexperience",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -11134,12 +9841,8 @@
           "tableFrom": "userexperience",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -11340,14 +10043,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "block"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "block"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11356,14 +10053,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "city"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "city"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11372,14 +10063,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "country"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "country"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11388,14 +10073,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "district"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "district"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11404,14 +10083,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "state"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "state"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11420,14 +10093,8 @@
           "tableFrom": "useraddress",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "useraddresstype"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "useraddresstype"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11436,12 +10103,8 @@
           "tableFrom": "useraddress",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11450,12 +10113,8 @@
           "tableFrom": "useraddress",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11464,12 +10123,8 @@
           "tableFrom": "useraddress",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11478,12 +10133,8 @@
           "tableFrom": "useraddress",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11492,12 +10143,8 @@
           "tableFrom": "useraddress",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11506,12 +10153,8 @@
           "tableFrom": "useraddress",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11520,12 +10163,8 @@
           "tableFrom": "useraddress",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "verifiedby"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["verifiedby"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -11678,12 +10317,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11692,12 +10327,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11706,12 +10337,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11720,12 +10347,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11734,12 +10357,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -11748,12 +10367,8 @@
           "tableFrom": "user_directorship",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -11893,12 +10508,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11907,12 +10518,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11921,12 +10528,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -11935,12 +10538,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -11949,12 +10548,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -11963,12 +10558,8 @@
           "tableFrom": "userimmigration",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -12078,12 +10669,8 @@
           "tableFrom": "userlog",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12092,12 +10679,8 @@
           "tableFrom": "userlog",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12106,12 +10689,8 @@
           "tableFrom": "userlog",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12120,12 +10699,8 @@
           "tableFrom": "userlog",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12134,12 +10709,8 @@
           "tableFrom": "userlog",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12148,12 +10719,8 @@
           "tableFrom": "userlog",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -12287,12 +10854,8 @@
           "tableFrom": "userskill",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12301,12 +10864,8 @@
           "tableFrom": "userskill",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12315,12 +10874,8 @@
           "tableFrom": "userskill",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12329,12 +10884,8 @@
           "tableFrom": "userskill",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -12343,12 +10894,8 @@
           "tableFrom": "userskill",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -12357,12 +10904,8 @@
           "tableFrom": "userskill",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -12485,12 +11028,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "changed_by"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["changed_by"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12499,12 +11038,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12513,12 +11048,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12527,12 +11058,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -12541,12 +11068,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -12555,12 +11078,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -12569,12 +11088,8 @@
           "tableFrom": "userprofile_doj_history",
           "tableTo": "userprofile",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }
@@ -12714,12 +11229,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "role",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "role"
-          ],
-          "columnsTo": [
-            "code"
-          ],
+          "columnsFrom": ["role"],
+          "columnsTo": ["code"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12728,12 +11239,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12742,12 +11249,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12756,12 +11259,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12770,12 +11269,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12784,12 +11279,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -12798,12 +11289,8 @@
           "tableFrom": "userrolemap",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -13164,14 +11651,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "band"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "band"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13180,14 +11661,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "branch"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "branch"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13196,14 +11671,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "city"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "city"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13212,14 +11681,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "company"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "company"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13228,14 +11691,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "department"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "department"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13244,14 +11701,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "designation"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "designation"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13260,14 +11711,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "empstatus"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "empstatus"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13276,14 +11721,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "gender"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "gender"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13292,14 +11731,8 @@
           "tableFrom": "userprofile",
           "tableTo": "datagroup",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "baselocation"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "baselocation"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13308,14 +11741,8 @@
           "tableFrom": "userprofile",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "worklocation"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "worklocation"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13324,12 +11751,8 @@
           "tableFrom": "userprofile",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13338,12 +11761,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13352,12 +11771,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "hrbp"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["hrbp"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13366,12 +11781,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "l1_manager"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["l1_manager"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13380,12 +11791,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "l2_manager"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["l2_manager"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13394,12 +11801,8 @@
           "tableFrom": "userprofile",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13408,12 +11811,8 @@
           "tableFrom": "userprofile",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13422,12 +11821,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13436,12 +11831,8 @@
           "tableFrom": "userprofile",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -13546,12 +11937,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13560,12 +11947,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13574,12 +11957,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13588,12 +11967,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13602,12 +11977,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -13616,12 +11987,8 @@
           "tableFrom": "userexperience_document",
           "tableTo": "userexperience",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "userexperience_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userexperience_id"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -13737,12 +12104,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13751,12 +12114,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13765,12 +12124,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13779,12 +12134,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13793,12 +12144,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -13807,12 +12154,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13821,12 +12164,8 @@
           "tableFrom": "userskilltool",
           "tableTo": "userskill",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "userskill"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["userskill"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -13972,12 +12311,8 @@
           "tableFrom": "userworkpreference",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -13986,12 +12321,8 @@
           "tableFrom": "userworkpreference",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14000,12 +12331,8 @@
           "tableFrom": "userworkpreference",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14014,12 +12341,8 @@
           "tableFrom": "userworkpreference",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14028,12 +12351,8 @@
           "tableFrom": "userworkpreference",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -14168,12 +12487,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14182,12 +12497,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14196,12 +12507,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14210,12 +12517,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14224,12 +12527,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14238,12 +12537,8 @@
           "tableFrom": "userfeedback",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "usermaster"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["usermaster"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -14336,12 +12631,8 @@
           "tableFrom": "agency_service_map",
           "tableTo": "agency_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "agency_master_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["agency_master_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14350,12 +12641,8 @@
           "tableFrom": "agency_service_map",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "service_masterdata_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["service_masterdata_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         }
@@ -14488,12 +12775,8 @@
           "tableFrom": "usermaster",
           "tableTo": "company_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "company_id"
-          ],
-          "columnsTo": [
-            "company_id"
-          ],
+          "columnsFrom": ["company_id"],
+          "columnsTo": ["company_id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14502,12 +12785,8 @@
           "tableFrom": "usermaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14516,12 +12795,8 @@
           "tableFrom": "usermaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14530,12 +12805,8 @@
           "tableFrom": "usermaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14544,12 +12815,8 @@
           "tableFrom": "usermaster",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14558,12 +12825,8 @@
           "tableFrom": "usermaster",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -14692,14 +12955,8 @@
           "tableFrom": "role",
           "tableTo": "masterdata",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant",
-            "approvertype"
-          ],
-          "columnsTo": [
-            "code",
-            "tenant"
-          ],
+          "columnsFrom": ["tenant", "approvertype"],
+          "columnsTo": ["code", "tenant"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -14708,12 +12965,8 @@
           "tableFrom": "role",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -14722,12 +12975,8 @@
           "tableFrom": "role",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -14736,12 +12985,8 @@
           "tableFrom": "role",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -14750,12 +12995,8 @@
           "tableFrom": "role",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -14764,12 +13005,8 @@
           "tableFrom": "role",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -14932,12 +13169,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createdtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createdtenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14946,12 +13179,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "createduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["createduser"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14960,12 +13189,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "subscriptionmaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "subscription"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["subscription"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14974,12 +13199,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "tenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tenant"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -14988,12 +13209,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "tenant",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updatedtenant"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updatedtenant"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         },
@@ -15002,12 +13219,8 @@
           "tableFrom": "tenantsubscription",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "updateduser"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["updateduser"],
+          "columnsTo": ["id"],
           "onDelete": "set null",
           "onUpdate": "cascade"
         }
@@ -15100,12 +13313,8 @@
           "tableFrom": "user_agency_map",
           "tableTo": "agency_master",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "agency_master_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["agency_master_id"],
+          "columnsTo": ["id"],
           "onDelete": "restrict",
           "onUpdate": "cascade"
         },
@@ -15114,12 +13323,8 @@
           "tableFrom": "user_agency_map",
           "tableTo": "usermaster",
           "schemaTo": "ppl_first",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "cascade"
         }

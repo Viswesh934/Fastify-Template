@@ -13,7 +13,7 @@ const pool = new Pool({
 });
 
 // Handle pool errors
-pool.on('error', (err) => {
+pool.on("error", (err) => {
   Logger.error("DATABASE", `Unexpected error on idle client: ${err.message}`);
   process.exit(-1);
 });
@@ -30,7 +30,10 @@ export const initDb = async () => {
 
     return db;
   } catch (error) {
-    Logger.error("DATABASE", `Database initialization failed: ${error instanceof Error ? error.message : String(error)}`);
+    Logger.error(
+      "DATABASE",
+      `Database initialization failed: ${error instanceof Error ? error.message : String(error)}`,
+    );
     throw error;
   }
 };
@@ -40,7 +43,10 @@ export const closeDb = async () => {
     await pool.end();
     Logger.info("DATABASE", "Database connection closed");
   } catch (error) {
-    Logger.error("DATABASE", `Error closing database connection: ${error instanceof Error ? error.message : String(error)}`);
+    Logger.error(
+      "DATABASE",
+      `Error closing database connection: ${error instanceof Error ? error.message : String(error)}`,
+    );
     throw error;
   }
 };

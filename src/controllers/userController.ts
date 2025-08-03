@@ -3,7 +3,6 @@ import { addUserSchema } from "@api/schemas/addUserSchema";
 import { createUser } from "@api/services/userService";
 import { z } from "zod";
 
-
 export const addUserHandler = async (request: FastifyRequest, reply: FastifyReply) => {
   try {
     const data = addUserSchema.parse(request.body);
@@ -13,7 +12,6 @@ export const addUserHandler = async (request: FastifyRequest, reply: FastifyRepl
       success: true,
       data: newUser,
     });
-
   } catch (error) {
     if (error instanceof z.ZodError) {
       return reply.status(400).send({

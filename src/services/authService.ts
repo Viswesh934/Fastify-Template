@@ -9,7 +9,7 @@ export const authenticateUser = async (username: string, password: string) => {
     .select()
     .from(usermasterInPplFirst)
     .where(eq(usermasterInPplFirst.login, username))
-    .then(rows => rows[0]);
+    .then((rows) => rows[0]);
 
   if (!user) throw new Error("INVALID_CREDENTIALS");
   if (!user.isactive) throw new Error("ACCOUNT_DISABLED");
@@ -24,7 +24,7 @@ export const authenticateUser = async (username: string, password: string) => {
       tenant: user.tenant,
     },
     process.env.JWT_SECRET!,
-    { expiresIn: "24h" }
+    { expiresIn: "24h" },
   );
 
   return {
