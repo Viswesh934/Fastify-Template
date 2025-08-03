@@ -1,8 +1,11 @@
+import 'dotenv/config'; 
 import { initDb } from "@api/db";
 import { testRoutes } from "@api/routes";
-import { env, Logger } from "@api/utils";
+import { addUserRoute, loginRoute   } from "@api/routes";
+import { Logger } from "@api/utils";
 import fastify from "fastify";
-import { middleware } from "./modules/middleware";
+import { middleware} from "./plugins/middleware";
+
 
 const API_VERSION = "v1";
 
@@ -23,10 +26,19 @@ export const main = async () => {
 
   // Routes
   server.register(testRoutes, {
-    prefix: `/${API_VERSION}/test`,
+    prefix: `/${API_VERSION}/test`
+  });
+  server.register(addUserRoute, {
+    prefix: `/${API_VERSION}`
+  });
+  server.register(loginRoute, {
+    prefix: `/${API_VERSION}`,
   });
 
-  server.listen({ host: env.HOST, port: env.PORT }, (error, address) => {
+  const host = process.env.HOST || "127.0.0.1";
+  const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+
+  server.listen({ host, port }, (error, address) => {
     if (error) {
       Logger.error("INIT", error.message);
       throw new Error(error.message);

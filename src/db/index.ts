@@ -1,38 +1,46 @@
-import * as schema from "@api/db/schemas";
-import { env, Logger } from "@api/utils";
+import { Logger } from "@api/utils";
 import { drizzle } from "drizzle-orm/node-postgres";
-import { migrate } from "drizzle-orm/node-postgres/migrator";
 import { Pool } from "pg";
 
-export let db: ReturnType<typeof drizzle<typeof schema>>;
+// Database singleton instance
+export let db: ReturnType<typeof drizzle>;
+
+// Connection pool configuration
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  max: 10,
+  idleTimeoutMillis: 30000,
+});
+
+// Handle pool errors
+pool.on('error', (err) => {
+  Logger.error("DATABASE", `Unexpected error on idle client: ${err.message}`);
+  process.exit(-1);
+});
 
 export const initDb = async () => {
-  const pool = await new Pool({
-    connectionString: env.DATABASE_URL,
-  })
-    .connect()
-    .then((client) => {
-      Logger.info("INIT", "Connected to database");
+  try {
+    // Test the connection
+    const client = await pool.connect();
+    client.release();
+    Logger.info("DATABASE", "Successfully connected to PostgreSQL");
 
-      return client;
-    })
-    .catch((error) => {
-      Logger.error("INIT", `Failed to connect to database ${String(error)}}`);
-      throw new Error(`Failed to connect to database ${String(error)}`);
-    });
+    // Initialize Drizzle
+    db = drizzle(pool);
 
-  db = drizzle(pool, {
-    schema,
-  });
+    return db;
+  } catch (error) {
+    Logger.error("DATABASE", `Database initialization failed: ${error instanceof Error ? error.message : String(error)}`);
+    throw error;
+  }
+};
 
-  await migrate(db, {
-    migrationsFolder: "./src/db/migrations",
-  })
-    .then(() => {
-      Logger.info("INIT", "Migrated database");
-    })
-    .catch((error) => {
-      Logger.error("INIT", `Failed to migrate database ${String(error)}`);
-      throw new Error(`Failed to migrate database ${String(error)}`);
-    });
+export const closeDb = async () => {
+  try {
+    await pool.end();
+    Logger.info("DATABASE", "Database connection closed");
+  } catch (error) {
+    Logger.error("DATABASE", `Error closing database connection: ${error instanceof Error ? error.message : String(error)}`);
+    throw error;
+  }
 };
